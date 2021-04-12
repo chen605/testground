@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  align-items: center;
+  color: lightgray;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.nav__title > h1 {
+  font-weight: 400;
+  display: flex;
+}
+
+.nav__logo {
+  font-size: 32px;
+  margin-left: 5px;
+  margin-top: 1%;
+}
+
+.nav__links {
+  border: 1px solid blue;
+}

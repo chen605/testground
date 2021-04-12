@@ -3,8 +3,6 @@
   border-radius: 20px;
   margin-right: 10px;
   transition: transform 450ms;
-
-  /* align-items: center; */
 }
 
 .synopsis:hover {
