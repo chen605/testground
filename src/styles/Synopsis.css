@@ -1,0 +1,23 @@
+.synopsis {
+  display: flex;
+  border-radius: 20px;
+  margin-right: 10px;
+  border: 1px solid rgba(255, 0, 0, 0.7);
+  align-items: center;
+}
+
+.synopsis__container {
+  margin-left: 3%;
+  font-size: 15px;
+}
+
+.synopsis__buttons > button {
+  margin-top: 3%;
+  outline: none;
+  border: none;
+  background-color: #e50914;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+}

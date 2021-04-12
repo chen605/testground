@@ -1,9 +1,3 @@
 .app {
-  display: flex;
-  flex-direction: column;
-}
-
-.app > .box > img {
-  width: 200px;
-  object-fit: contain;
+  background-color: #111;
 }
