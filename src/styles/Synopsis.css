@@ -2,13 +2,15 @@
   display: flex;
   border-radius: 20px;
   margin-right: 10px;
-  /* border: 1px solid rgba(255, 0, 0, 0.7); */
   transition: transform 450ms;
+
   /* align-items: center; */
 }
 
 .synopsis:hover {
   transform: scale(1.03);
+  border: 1px solid rgba(45, 104, 231, 0.7);
+
   opacity: 1;
 }
 
