@@ -22,7 +22,7 @@
 
 .synopsis__container > h1 {
   font-weight: 500;
-  color: #fff;
+  color: rgb(230, 227, 227);
 }
 
 .synopsis__container > h4 {
@@ -35,9 +35,10 @@
   margin-top: 3%;
   outline: none;
   border: none;
-  background-color: #e50914;
+  background-color: #ad171eea;
   cursor: pointer;
-  color: #fff;
+  color: lightgray;
+  font-weight: 500;
   padding: 10px 20px;
   border-radius: 10px;
   margin-bottom: 3%;
