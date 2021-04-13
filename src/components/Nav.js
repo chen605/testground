@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Nav.css";
-import { MdLocalMovies } from "react-icons/md";
+import { MdLocalMovies, MdArrowDropDown } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 function Nav() {
   const [show, setShow] = useState(false);
+  const [collapse, setCollapse] = useState(false);
 
   const transitionNavBar = () => {
     if (window.scrollY > 50) {
@@ -35,9 +36,48 @@ function Nav() {
           <NavLink exact to="/trending">
             Trending
           </NavLink>
-          <NavLink exact to="/genre">
-            Genre
-          </NavLink>
+          {collapse ? (
+            <>
+              <h3 onClick={() => setCollapse(!collapse)}>
+                Genre
+                <MdArrowDropDown />
+              </h3>
+              <div className="nav__container__genres">
+                <div className="nav__container__genre">
+                  <div>
+                    <NavLink exact to="/Action" className="link">
+                      Action
+                    </NavLink>
+                  </div>
+                  <div>
+                    <NavLink exact to="/Comedy" className="link">
+                      Comedy
+                    </NavLink>
+                  </div>
+                  <div>
+                    <NavLink exact to="/Horror" className="link">
+                      Horror
+                    </NavLink>
+                  </div>
+                  <div>
+                    <NavLink exact to="/Romance" className="link">
+                      Romance
+                    </NavLink>
+                  </div>
+                  <div>
+                    <NavLink exact to="/Documentaries" className="link">
+                      Documentaries
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : (
+            <h3 onClick={() => setCollapse(!collapse)}>
+              Genre
+              <MdArrowDropDown />
+            </h3>
+          )}
         </div>
       </div>
     </div>

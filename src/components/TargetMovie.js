@@ -20,8 +20,8 @@ function TargetMovie({ movie, imageUrl, isLargeRow = false }) {
                 onClick={() => setChosenMovie(!chosenMovie)}
               />
               <Synopsis
-                title={movie.name}
-                airDate={movie.first_air_date}
+                title={movie.name || movie.title}
+                airDate={movie.first_air_date || movie.release_date}
                 overview={movie.overview}
                 imageUrl={imageUrl}
               />

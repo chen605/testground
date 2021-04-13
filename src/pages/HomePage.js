@@ -23,6 +23,7 @@ function HomePage() {
           <div data-src="https://images.hdqwalls.com/download/the-umbrella-academy-season-2-2020-lo-1920x1080.jpg" />
           <div data-src="https://vignette.wikia.nocookie.net/riverdalearchie/images/2/20/Chilling_Adventures_of_Sabrina_Official_Banner.jpg/revision/latest?cb=20180916192837" />
         </AutoplaySlider>
+
         <MovieList
           title="Featured"
           fetchUrl={requests.fetchNetflixOriginals}

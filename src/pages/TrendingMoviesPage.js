@@ -1,10 +1,17 @@
 import React from "react";
+import MovieList from "../components/MovieList";
+import requests from "../axios/Request";
+
 import "../styles/TrendingMovies.css";
 
 function TrendingMoviesPage() {
   return (
     <div className="trending">
-      <h1>trending page</h1>
+      <MovieList
+        title="Trending"
+        fetchUrl={requests.fetchTrending}
+        isLargeRow
+      />
     </div>
   );
 }
