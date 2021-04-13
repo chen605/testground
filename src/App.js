@@ -3,6 +3,7 @@ import "./App.css";
 import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import TrendingMoviesPage from "./pages/TrendingMoviesPage";
 
 function App() {
   return (
@@ -10,9 +11,14 @@ function App() {
       <Router>
         <Nav />
         <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
+          <div className="app__body">
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route exact path="/trending">
+              <TrendingMoviesPage />
+            </Route>
+          </div>
         </Switch>
       </Router>
     </div>

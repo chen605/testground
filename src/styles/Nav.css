@@ -36,7 +36,9 @@
 
 .nav__links {
   display: flex;
-  /* border: 1px solid red; */
+  justify-content: space-evenly;
+  width: 300px;
+  border: 1px solid red;
 }
 
 .nav__links > a {
