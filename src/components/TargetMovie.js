@@ -5,7 +5,7 @@ import Synopsis from "./Synopsis";
 function TargetMovie({ movie, imageUrl, isLargeRow = false }) {
   const [chosenMovie, setChosenMovie] = useState(false);
   const base_url = "https://image.tmdb.org/t/p/original/";
-  console.log(movie);
+
   return (
     <div>
       {chosenMovie
