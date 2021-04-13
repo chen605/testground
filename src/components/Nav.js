@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Nav.css";
 import { MdLocalMovies, MdArrowDropDown } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
 function Nav() {
   const [show, setShow] = useState(false);
   const [collapse, setCollapse] = useState(false);
-
+  const history = useHistory();
   const transitionNavBar = () => {
     if (window.scrollY > 50) {
       setShow(true);
@@ -23,7 +23,7 @@ function Nav() {
   return (
     <div className={`nav ${show && "nav__black"}`}>
       <div className="nav__content">
-        <h1>
+        <h1 onClick={() => history.push("/")}>
           Chen's Movie CardList DB
           <span className="nav__logo">
             <MdLocalMovies />
@@ -45,27 +45,27 @@ function Nav() {
               <div className="nav__container__genres">
                 <div className="nav__container__genre">
                   <div>
-                    <NavLink exact to="/Action" className="link">
+                    <NavLink exact to="/action" className="link">
                       Action
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink exact to="/Comedy" className="link">
+                    <NavLink to="/comedy" className="link">
                       Comedy
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink exact to="/Horror" className="link">
+                    <NavLink to="/horror" className="link">
                       Horror
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink exact to="/Romance" className="link">
+                    <NavLink to="/romance" className="link">
                       Romance
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink exact to="/Documentaries" className="link">
+                    <NavLink to="/documentaries" className="link">
                       Documentaries
                     </NavLink>
                   </div>
