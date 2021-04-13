@@ -6,13 +6,15 @@
 .movie-list > h2 {
   font-weight: 300;
   border-bottom: 1px solid lightgray;
-  width: 95%;
+  width: 100%;
   line-height: 1.5;
+  margin-top: 3%;
 }
 
 .row__posters {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 1%;
 }
 
