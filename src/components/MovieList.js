@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios/axios";
 import "../styles/MovieList.css";
+
 import TargetMovie from "./TargetMovie";
 
 function MovieList({ title, fetchUrl, isLargeRow = false }) {

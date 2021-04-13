@@ -47,6 +47,20 @@
   color: lightgray;
   width: 20%;
   font-size: 20px;
-  display: flex;
-  justify-content: space-between;
+  padding-right: 0.4rem;
+  padding-left: 0.4rem;
+}
+
+.synopsis__icons:hover {
+  color: white;
+}
+
+.synopsis__icons__heart {
+  font-size: 20px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.synopsis__icons__heart:hover {
+  color: red;
 }

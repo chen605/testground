@@ -25,7 +25,11 @@ function Synopsis({ title, airDate, overview, imageUrl }) {
         </div>
         <span className="synopsis__icons">
           <MdShare />
+        </span>
+        <span className="synopsis__icons__heart">
           <MdFavorite />
+        </span>
+        <span className="synopsis__icons">
           <MdChatBubble />
         </span>
       </div>
