@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import "../styles/Nav.css";
 import { MdLocalMovies, MdArrowDropDown } from "react-icons/md";
 import { NavLink, useHistory } from "react-router-dom";
+import { Avatar } from "@material-ui/core";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userSlice";
 
 function Nav() {
+  const user = useSelector(selectUser);
+  const history = useHistory();
   const [show, setShow] = useState(false);
   const [collapse, setCollapse] = useState(false);
-  const history = useHistory();
   const transitionNavBar = () => {
     if (window.scrollY > 50) {
       setShow(true);
@@ -42,6 +46,7 @@ function Nav() {
                 Genre
                 <MdArrowDropDown />
               </h3>
+
               <div className="nav__container__genres">
                 <div className="nav__container__genre">
                   <div>
@@ -78,6 +83,12 @@ function Nav() {
               <MdArrowDropDown />
             </h3>
           )}
+          <Avatar
+            className="nav__container__avatar"
+            onClick={() => history.push("/profile")}
+          >
+            {user.email[0].toUpperCase()}
+          </Avatar>
         </div>
       </div>
     </div>

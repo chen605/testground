@@ -83,3 +83,9 @@
 .nav__black {
   background-color: #111;
 }
+
+.nav__container__avatar {
+  width: 30px !important;
+  height: 30px !important;
+  cursor: pointer;
+}

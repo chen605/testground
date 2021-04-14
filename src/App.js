@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
@@ -10,12 +10,33 @@ import HorrorPage from "./pages/HorrorPage";
 import RomancePage from "./pages/RomancePage";
 import DocumentaryPage from "./pages/DocumentaryPage";
 import { useDispatch, useSelector } from "react-redux";
-import { selectUser } from "./features/userSlice";
+import { login, logout, selectUser } from "./features/userSlice";
 import LandingPage from "./pages/LandingPage";
+import { auth } from "./firebase/firebase";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+      if (userAuth) {
+        //logged in
+        dispatch(
+          login({
+            uid: userAuth.uid,
+            email: userAuth.email,
+          })
+        );
+      } else {
+        // logged out
+        dispatch(logout());
+      }
+    });
+    return unsubscribe;
+  }, [dispatch]);
+
   return (
     <div className="app">
       <Router>
@@ -28,6 +49,9 @@ function App() {
               <div className="app__body">
                 <Route exact path="/">
                   <HomePage />
+                </Route>
+                <Route exact path="/profile">
+                  <ProfilePage />
                 </Route>
 
                 <Route exact path="/trending">
