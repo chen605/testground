@@ -48,13 +48,11 @@ function App() {
             <Switch>
               <div className="app__body">
                 <Route exact path="/">
-                  <ProfilePage />
-                </Route>
-
-                <Route exact path="/home">
                   <HomePage />
                 </Route>
-
+                <Route exact path="/profile">
+                  <ProfilePage />
+                </Route>
                 <Route exact path="/trending">
                   <TrendingMoviesPage />
                 </Route>
