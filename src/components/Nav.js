@@ -27,14 +27,14 @@ function Nav() {
   return (
     <div className={`nav ${show && "nav__black"}`}>
       <div className="nav__content">
-        <h1 onClick={() => history.push("/")}>
+        <h1 onClick={() => history.push("/home")}>
           Chen's Movie CardList DB
           <span className="nav__logo">
             <MdLocalMovies />
           </span>
         </h1>
         <div className="nav__links">
-          <NavLink exact to="/">
+          <NavLink exact to="/home">
             Home
           </NavLink>
           <NavLink exact to="/trending">
