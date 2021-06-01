@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
-import "./App.css";
-import Nav from "./components/Nav";
-import HomePage from "./pages/HomePage";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import TrendingMoviesPage from "./pages/TrendingMoviesPage";
-import ActionPage from "./pages/ActionPage";
-import ComedyPage from "./pages/ComedyPage";
-import HorrorPage from "./pages/HorrorPage";
-import RomancePage from "./pages/RomancePage";
-import DocumentaryPage from "./pages/DocumentaryPage";
-import { useDispatch, useSelector } from "react-redux";
-import { login, logout, selectUser } from "./features/userSlice";
-import LandingPage from "./pages/LandingPage";
-import { auth } from "./firebase/firebase";
-import ProfilePage from "./pages/ProfilePage";
+import React, { useEffect } from 'react';
+import './App.css';
+import Nav from './components/Nav';
+import HomePage from './pages/HomePage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import TrendingMoviesPage from './pages/TrendingMoviesPage';
+import ActionPage from './pages/ActionPage';
+import ComedyPage from './pages/ComedyPage';
+import HorrorPage from './pages/HorrorPage';
+import RomancePage from './pages/RomancePage';
+import DocumentaryPage from './pages/DocumentaryPage';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout, selectUser } from './features/userSlice';
+import LandingPage from './pages/LandingPage';
+import { auth } from './firebase/firebase';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   const user = useSelector(selectUser);
@@ -50,25 +50,25 @@ function App() {
                 <Route exact path="/">
                   <HomePage />
                 </Route>
-                <Route exact path="/profile">
+                <Route path="/profile">
                   <ProfilePage />
                 </Route>
-                <Route exact path="/trending">
+                <Route path="/trending">
                   <TrendingMoviesPage />
                 </Route>
-                <Route exact path="/action">
+                <Route path="/action">
                   <ActionPage />
                 </Route>
-                <Route exact path="/comedy">
+                <Route path="/comedy">
                   <ComedyPage />
                 </Route>
-                <Route exact path="/horror">
+                <Route path="/horror">
                   <HorrorPage />
                 </Route>
-                <Route exact path="/romance">
+                <Route path="/romance">
                   <RomancePage />
                 </Route>
-                <Route exact path="/documentaries">
+                <Route path="/documentaries">
                   <DocumentaryPage />
                 </Route>
               </div>
