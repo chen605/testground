@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import "../styles/Nav.css";
-import { MdLocalMovies, MdArrowDropDown } from "react-icons/md";
-import { NavLink, useHistory } from "react-router-dom";
-import { Avatar } from "@material-ui/core";
-import { useSelector } from "react-redux";
-import { selectUser } from "../features/userSlice";
+import React, { useEffect, useState } from 'react';
+import '../styles/Nav.css';
+import { MdLocalMovies, MdArrowDropDown } from 'react-icons/md';
+import { NavLink, useHistory } from 'react-router-dom';
+import { Avatar } from '@material-ui/core';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../features/userSlice';
 
 function Nav() {
   const user = useSelector(selectUser);
@@ -20,14 +20,14 @@ function Nav() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", transitionNavBar);
-    return () => window.removeEventListener("scroll", transitionNavBar);
+    window.addEventListener('scroll', transitionNavBar);
+    return () => window.removeEventListener('scroll', transitionNavBar);
   }, []);
 
   return (
-    <div className={`nav ${show && "nav__black"}`}>
+    <div className={`nav ${show && 'nav__black'}`}>
       <div className="nav__content">
-        <h1 onClick={() => history.push("/")}>
+        <h1 onClick={() => history.push('/')}>
           Chen's Movie CardList DB
           <span className="nav__logo">
             <MdLocalMovies />
@@ -37,9 +37,7 @@ function Nav() {
           <NavLink exact to="/">
             Home
           </NavLink>
-          <NavLink exact to="/trending">
-            Trending
-          </NavLink>
+          <NavLink to="/trending">Trending</NavLink>
           {collapse ? (
             <>
               <h3 onClick={() => setCollapse(!collapse)}>
@@ -50,7 +48,7 @@ function Nav() {
               <div className="nav__container__genres">
                 <div className="nav__container__genre">
                   <div>
-                    <NavLink exact to="/action" className="link">
+                    <NavLink to="/action" className="link">
                       Action
                     </NavLink>
                   </div>
@@ -85,7 +83,7 @@ function Nav() {
           )}
           <Avatar
             className="nav__container__avatar"
-            onClick={() => history.push("/profile")}
+            onClick={() => history.push('/profile')}
           >
             {user.email[0].toUpperCase()}
           </Avatar>
